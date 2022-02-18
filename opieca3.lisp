@@ -1,5 +1,5 @@
 #|  Name:       Craig Opie
-    Assignment: 2
+    Assignment: 3
     Sources:    https://lisp-lang.org/learn/getting-started/
                 https://linux.die.net/man/1/sbcl
                 http://www.sbcl.org/manual/#Global-and-Always_002dBound-variables
