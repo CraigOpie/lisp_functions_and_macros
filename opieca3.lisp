@@ -49,3 +49,29 @@
         ((numberp (car list_)) (REMOVE-NUMBERS (cdr list_)))
         (T (cons (car list_) (REMOVE-NUMBERS (cdr list_))))))
 
+;;; Write a macro called MYSHOUT that takes a string, and prints to the screen your name (taken from +ID+), 
+;;; "says", then the string in all capital letters followed by an exclamation point. Thus: (MYSHOUT "get off
+;;; my lawn") prints "[Your Name] says GET OFF MY LAWN!" to the screen. It should return T. Use the built-in
+;;; functions FORMAT (once) and STRING-UPCASE in this macro.
+(defmacro MYSHOUT()
+
+)
+
+;;; Write a macro CALLFUNCTION that takes two arguments: the name of a function and a list of arguments. It
+;;; returns the result of calling that function on the arguments. Thus: (CALLFUNCTION + (1 2)) --> 3. Another
+;;; example: (CALLFUNCTION LIST ('a 'b 'c)) --> (a b c).
+(defmacro CALLFUNCTION()
+
+)
+
+;;; Write a macro WEIRDCALL that takes two arguments: a list of two mathematical function names, and a list
+;;; of two lists of arguments. It will return a list of the result of applying the first function to the
+;;; second list of arguments, and the second function to the first list of arguments.
+;;; Thus: (WEIRDCALL (+ -) ((2 1) (6 1))) --> (7 1). Another example: (WEIRDCALL (list list) (('a 'b) ('c 'd)))
+;;; --> ((c d) (a b))
+(defmacro WEIRDCALL()
+
+)
+
+;;; Rewrite 1-3 without any 'syntactic sugar' (i.e. backquote, comma, or splice). If you wrote them that way
+;;; in the first place, then rewrite them using syntactic sugar.
