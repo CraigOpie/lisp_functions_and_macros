@@ -1,0 +1,106 @@
+Script started on 2022-02-21 00:16:58-10:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="157" LINES="22"]
+]0;craig@deathstar-01: ~/Git/lisp_functions_and_macros[01;32mcraig@deathstar-01[00m:[01;34m~/Git/lisp_functions_and_macros[00m$ sbcl --load ope[Kieca3A.lisp 
+This is SBCL 2.0.1.debian, an implementation of ANSI Common Lisp.
+More information about SBCL is available at <http://www.sbcl.org/>.
+
+SBCL is free software, provided as is, with absolutely no warranty.
+It is mostly in the public domain; some portions are provided under
+BSD-style licenses.  See the CREDITS and COPYING files in the
+distribution for more information.
+* (fibonacci )
+Error: Index is null.
+NIL
+* fib   (fibonacci "d")
+Error: Index is not an integer.
+NIL
+* (fibonacci -4)
+Error: Index must be positive.
+NIL
+* (fibonacci 0)
+0
+* fibonnacci            (fibonacci 7)
+13
+* (mygcd)
+Error: Minimum number of inputs: (2)
+NIL
+* (mygcd 1)
+Error: Minimum number of inputs: (2)
+NIL
+* (mygcd 5 15)
+5
+* (mygcd -5 15)
+Error: Inputs must be positive integers.
+NIL
+* (mygcd 5 -15)
+Error: Inputs must be positive integers.
+NIL
+* (myc gcd 12 18)
+6
+* (mylcm)
+Error: Minimum number of inputs: (2)
+NIL
+* (mylcm 1)
+Error: Minimum number of inputs: (2)
+NIL
+* myg   (mygcd 5 15 27)
+1
+* (mygcd 105 227 8 1024)
+1
+* (myc gcd 50 250 200)       00 20 50)
+50
+* (mylcm 3 4)
+12
+* (mylcm 3 4 16)
+48
+* M (mylcm -5 5)
+Error: Inputs must be positive integers.
+NIL
+* (remove-numbers "a")
+Error: Argument must be a list.
+NIL
+* (remove-numbers '(5 (a 1 b) c 4))
+((A B) C)
+* ma  (macroexpand '(MYSHOUT "get off my lawn"))
+(FORMAT T "~a says ~a!" "Craig Opie" (STRING-UPCASE "get off my lawn"))
+T
+* (MYSHOUT "get off my lawn")
+Craig Opie says GET OFF MY LAWN!
+NIL
+* (macroexpand '(MYSHOUT2 "get off my lawn"))
+(FORMAT T "~a says ~a!" "Craig Opie" (STRING-UPCASE "get off my lawn"))
+T
+* (MYSHOUT2 "get off my lo awn")
+Craig Opie says GET OFF MY LAWN!
+NIL
+* (macroexpand '(CALLFUNCTION + (1 2)))
+(+ 1 2)
+T
+* (CALLFUNCTION + (1 2))
+3
+* (macroexpand '(CALLFUNCTION2 + (1 2)))
+(+ 1 2)
+T
+* (CALLFUNCTION2 + (1 2))
+3
+* (CALLFUNCTION LIST ('a 'b 'c))
+(A B C)
+* (macroexpand '(CALLFUNCTION LIST ('a 'b 'c)))
+(LIST 'A 'B 'C)
+T
+* macro     (macroexpand '(WEIRDCALL (+ -) ((2 1) (6 1))))
+(LIST (+ 6 1) (- 2 1))
+T
+* (WEIRDCALL (+ -) ((2 1) (6 1)))
+(7 1)
+* (WEIRDCALL  2 (+ -) ((2 1  ) (6 1)))
+(7 1)
+* (macroexpand '(WEIRDCALL2 (+ -) ((2 1) (6 1))))
+(LIST (+ 6 1) (- 2 1))
+T
+* (WEIRDCALL (list list) (('a 'b) ('c 'd)))
+((C D) (A B))
+* (quit)
+]0;craig@deathstar-01: ~/Git/lisp_functions_and_macros[01;32mcraig@deathstar-01[00m:[01;34m~/Git/lisp_functions_and_macros[00m$ exit
+exit
+
+Script done on 2022-02-21 00:30:47-10:00 [COMMAND_EXIT_CODE="0"]
